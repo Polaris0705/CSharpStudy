@@ -3,23 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// 240503_ÀÚ·áÇü°ú Çüº¯È¯¿¡ ´ëÇÑ ½ºÅÍµğ Å¬·¡½º
+/// 240503_ìë£Œí˜•ê³¼ í˜•ë³€í™˜ì— ëŒ€í•œ ìŠ¤í„°ë”” í´ë˜ìŠ¤ì…ë‹ˆë‹¤.
 /// </summary>
 
 public class DataTypeStudy : MonoBehaviour
-{   // °ª(value)Çü º¯¼ö
-    // ÀÚ·áÇü | º¯¼ö¸í | °ª
-    bool    isEnable   = false;    //1¹ÙÀÌÆ®, true/false ÀúÀå
-    int     number     = 0;        //32ºñÆ® = 4¹ÙÀÌÆ®, Á¤¼öÇü °ª ÀúÀå ÃÖ´ë 0~4,294,967,295, -2,147,483,648 ~ +2,147,483,648
-    uint    numberunit = 165484; //ºÎÈ£°¡ ¾ø´Â Á¤¼ö ÀÚ·áÇü
-    float   number2    = 35.5f;    // 4¹ÙÀÌÆ®, ½Ç¼ö/ÀÚ·áÇü º¯¼ö. ¼Ò¼öÁ¡ Ç¥ÇöÀÌ °¡´ÉÇÔ
-    double  number3    = 35.5;     //64ºñÆ® = 8¹ÙÀÌÆ®, º¸´Ù Á¤¹ĞÇÑ ¼ö Ç¥Çö °¡´É. ½Ç¼ö/ÀÚ·áÇü
-    char    data       = 'c';      //ÇÏ³ªÀÇ ¹®ÀÚ¸¦ ÀúÀå
-    string  name       = "CSharp"; // ¹®ÀÚ¿­, ¹®ÀÚÀÇ Å©±â¿¡ µû¶ó Å©±â°¡ º¯ÇÏ´Â ÀÚ·áÇü
+{   // ê°’(value)í˜• ë³€ìˆ˜
+    // ìë£Œí˜• | ë³€ìˆ˜ëª… | ê°’
+    bool    isEnable   = false;    //1ë°”ì´íŠ¸, true/false ì €ì¥
+    int     number     = 0;        //32ë¹„íŠ¸ = 4ë°”ì´íŠ¸, ì •ìˆ˜í˜• ê°’ ì €ì¥ ìµœëŒ€ 0~4,294,967,295, -2,147,483,648 ~ +2,147,483,648
+    uint    numberunit = 165484; //ë¶€í˜¸ê°€ ì—†ëŠ” ì •ìˆ˜ ìë£Œí˜•
+    float   number2    = 35.5f;    // 4ë°”ì´íŠ¸, ì‹¤ìˆ˜/ìë£Œí˜• ë³€ìˆ˜. ì†Œìˆ˜ì  í‘œí˜„ì´ ê°€ëŠ¥í•¨
+    double  number3    = 35.5;     //64ë¹„íŠ¸ = 8ë°”ì´íŠ¸, ë³´ë‹¤ ì •ë°€í•œ ìˆ˜ í‘œí˜„ ê°€ëŠ¥. ì‹¤ìˆ˜/ìë£Œí˜•
+    char    data       = 'c';      //í•˜ë‚˜ì˜ ë¬¸ìë¥¼ ì €ì¥
+    string  name       = "CSharp"; // ë¬¸ìì—´, ë¬¸ìì˜ í¬ê¸°ì— ë”°ë¼ í¬ê¸°ê°€ ë³€í•˜ëŠ” ìë£Œí˜•
 
-    int number4;//°ªÀ» ÇÒ´çÇÏÁö ¾Ê´Â °æ¿ì 0À¸·Î ÀÚµ¿ ÃÊ±âÈ­
+    int number4;//ê°’ì„ í• ë‹¹í•˜ì§€ ì•ŠëŠ” ê²½ìš° 0ìœ¼ë¡œ ìë™ ì´ˆê¸°í™”
 
-    const int age = 5;//»ó¼ö : runtime ½Ã º¯°æ ºÒ°¡ / ±Û·Î¹ú ³×ÀÓ½ºÆäÀÌ½º¿¡µµ Àû¿ëµÊ
+    const int age = 5;//ìƒìˆ˜ : runtime ì‹œ ë³€ê²½ ë¶ˆê°€ / ê¸€ë¡œë²Œ ë„¤ì„ìŠ¤í˜ì´ìŠ¤ì—ë„ ì ìš©ë¨
 
     // Start is called before the first frame update
     void Start()
@@ -28,30 +28,30 @@ public class DataTypeStudy : MonoBehaviour
         print(typeof(bool));
         print(number4);
 
-        //age = 60; <-¿À·ù³²
+        //age = 60; <-ì˜¤ë¥˜ë‚¨
 
-        //Çüº¯È¯(Type Cashing)
+        //í˜•ë³€í™˜(Type Cashing)
         int myInt = 10;
         double myDouble = 55.4;
 
-        //Çüº¯È¯ ¹æ½Ä 1 - ¾Ï½ÃÀû, ¸í½ÃÀû Çüº¯È¯
-        myDouble = myInt; // ¾Ï½ÃÀû Çüº¯È¯
-        myInt = myDouble; // ¾Ï½ÃÀû Çüº¯È¯ ºÒ°¡(doubleÀÌ Å©±â°¡ ´õ Ä¿¼­)
+        //í˜•ë³€í™˜ ë°©ì‹ 1 - ì•”ì‹œì , ëª…ì‹œì  í˜•ë³€í™˜
+        myDouble = myInt; // ì•”ì‹œì  í˜•ë³€í™˜
+        myInt = myDouble; // ì•”ì‹œì  í˜•ë³€í™˜ ë¶ˆê°€(doubleì´ í¬ê¸°ê°€ ë” ì»¤ì„œ)
 
-        myInt = (int)myDouble; //¸í½ÃÀû Çüº¯È¯: Å©±â°¡ Å« º¯¼ö¸¦ ÀÛÀº º¯¼ö·Î º¯È¯ -> 55
+        myInt = (int)myDouble; //ëª…ì‹œì  í˜•ë³€í™˜: í¬ê¸°ê°€ í° ë³€ìˆ˜ë¥¼ ì‘ì€ ë³€ìˆ˜ë¡œ ë³€í™˜ -> 55
 
-        //Çüº¯È¯ ¹æ½Ä 2 - 
+        //í˜•ë³€í™˜ ë°©ì‹ 2 - 
     }
 
     // Update is called once per frame
     void Update()
     {
-        myInt.ToString(); // intÇü º¯¼ö¸¦ stringÇüÀ¸·Î º¯È¯
+        myInt.ToString(); // intí˜• ë³€ìˆ˜ë¥¼ stringí˜•ìœ¼ë¡œ ë³€í™˜
         string age2 = 36;
         age.ToIntArray();
-        int.Parse(age2); //string->intÇüÀ¸·Î º¯È¯
-        float.Parse(age2);//string->floatÇüÀ¸·Î º¯È¯
-        double.Parse(age2);//string->doubleÇüÀ¸·Î º¯È¯
-        bool.Parse(age2);//string->boolÇüÀ¸·Î º¯È¯
+        int.Parse(age2); //string->intí˜•ìœ¼ë¡œ ë³€í™˜
+        float.Parse(age2);//string->floatí˜•ìœ¼ë¡œ ë³€í™˜
+        double.Parse(age2);//string->doubleí˜•ìœ¼ë¡œ ë³€í™˜
+        bool.Parse(age2);//string->boolí˜•ìœ¼ë¡œ ë³€í™˜
     }
 }
